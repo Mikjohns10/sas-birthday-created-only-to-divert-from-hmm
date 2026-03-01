@@ -1,15 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday Saswata Chotu! 🎂✨</title>
-    <meta name="description" content="A magical birthday celebration experience for Saswata Chotu - filled with love, joy, and beautiful surprises!" />
-    <meta name="author" content="Mik Halder" />
-  </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mik is Always ahead</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      color: #000000;
+      font-size: 3rem;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    /* Block all clicks, links, and navigation */
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    [onclick],
+    [href] {
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+  </style>
+  <script>
+    // Prevent any navigation or link clicks
+    document.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }, true);
+
+    // Prevent context menu
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+      return false;
+    });
+
+    // Prevent keyboard shortcuts that could navigate away
+    document.addEventListener('keydown', function (e) {
+      // Block F5, Ctrl+R (refresh), Ctrl+L (address bar), Alt+Left/Right (back/forward)
+      if (
+        e.key === 'F5' ||
+        (e.ctrlKey && e.key === 'r') ||
+        (e.ctrlKey && e.key === 'l') ||
+        (e.altKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight'))
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Prevent window from being navigated away
+    window.addEventListener('beforeunload', function (e) {
+      e.preventDefault();
+      e.returnValue = '';
+    });
+  </script>
+</head>
+
+<body>
+  <h1>Mik is Always ahead</h1>
+</body>
+
 </html>
